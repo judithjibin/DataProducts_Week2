@@ -1,0 +1,24 @@
+---
+title: "my_map"
+author: "Judith"
+date: "13/11/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(leaflet)
+```
+
+
+Here is a pin and pop up on the worlds richest temple, which is located in Kerala
+```{r}
+my_map <- leaflet() %>%
+    addTiles() %>%
+    addMarkers(lat = 8.4828, lng =76.9436 , popup = "Padmanabhaswamy Temple")
+
+my_map
+```
